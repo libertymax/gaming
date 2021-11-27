@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers</title>
+
+    <!--LINKING BOOTSTRAP-->
+    <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">
+
+    <!--ICONS-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="./style/main.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container under">
+                <div class="row">
+                    <div class="col-sm-12 col-xl-12">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Gamers<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M12 22c3.719 0 7.063-2.035 8.809-5.314L13 12l7.809-4.686C19.063 4.035 15.719 2 12 2 6.486 2 2 6.486 2 12s4.486 10 10 10zm-.5-16a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 11.5 6z"></path></svg></a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link disabled">Disabled</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                                </div>
+                            </div>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/folu-eludire-O9Epo1PwX5A-unsplash.jpg" class="d-block w-100" alt="Gamers">
+      <div class="carousel-caption d-none d-md-block">
+        <a class="btn btn-primary" href="./login" role="button">Login <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB7ElEQVRIS41Vi1XDMAy0R2ACygTQCSgbdAO6Ae0EtBswAhvACGWDMkHDBmxgTpas2Iqc4EdSE590+pySGGhFXCnvJmvmiLE1wAHTo0WQT+1E5hMshMARbENMLzGFjSR6htUJ+3NDvkzgxvoOgmeq4TSUeMLzo1p1S9Srfkxb+P2QGh4A+5T9DvtXMXvCb5tJ5Y970FsRhik8wukBJXpjIXCYuB/xL5F84drk56hhLRZCuk1WXAxJ9jfA/po4VjC/Chlgvt7mM4C1mGWcxq5hkt/yZ+hHQz81UUuZjmgDFPsSuAaqeYhb+sk17Sw5iAC5mNIVquRkSQ/qxDMtKYea9zDTfOFrghsQ6wG2UBrXk1g5g6qrsBxwfNs6n81SoBlzwW1d26qKmCODnGwNwQyfhKscnkyLNDvtMVqakjVBezL1Ox4xUCns8jzEsJc+eW1S4UiTGaNxRZRoQpFP73AfRDYrYDBktto66pr9VKbj9FbEedsQoGfXzvQ2Pr05KNNr078AvJbkSC33NoJq1E2T20zHJjcwnamO0rTUzdD9v8ljq2jnZzkKTJPzCAac8qDVEuxpv8V8o/nNG8AMWna7xXXUGpcyLQ/zD6B7XPxR4rfs4vfAfkM4LfNhsWpoW9p5D/cdmUmuK6lZjun+ATZCwSGwbEp7AAAAAElFTkSuQmCC"/></a>
+        <a class="btn btn-primary" href="./sign" role="button">Sign up <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACXklEQVRIS4WVjVkbMQyG4wkKEwATJJ0AmKBhApIJchsUJoBMQDoBbABMQJigYQM2uL6yfLJP9qV+HiU+naxPn358YdZYAV0/099ymT7wllctG7PHWGzkr3KkRlMw9ko3imRHDDjpxUuFUbt2Gue3Zpk1TYBjB4po7rDbQeKgDFwmcopKpqotWHdofnH+Cqs35AXZIkvkGflGLtJ/gZHBlEE744+oN8YmnxEAiV4A58gfZDX2k4M2AHOkmwXhfKTqrXneiROMn1I9f/J8SPIjsZDnatVdpJF2/D746BQo3JLDNTYCKiwukWv07Iu2ToybDFB2mD5Qt62CWX7E6S2yRrPDpgCI+xYDdHbe2nHBYVIU16pg8pR0kqI9Bw9EfcY+PU8BOH2CeSQVGzdHkoQtAXXo79j/5ugnIjXzHRi91jUYg0ktaMlwCdg7Tl9wKt2VCx5oVcDQSXdV83980NzsFNjn7K+QDo/zNGgMXb/2jKeKvGLcNhxYuPtOYiT3vbCg/2NaltpRgXbt79ELG1se4IQ3r5rT/y4pMu3ZyzRLGpns2KZMdix+TJdPEYdmc5RfmAr9PXYYW3IlNQIuDKR7xF46SNYOkRYesSgZDMP1pU4CkbW+B9GZMBUGgDB06jzeTzjcc2oATQw0ghg9mhv8yqUWV1lnmxKt5HDhlSx6P8AlgyHcU5Tf4xtYe9wROgf/b47DtVxGsgHpE0IoIzW/hjFyNHw1dZ7KT+noizbko52T8q3bTw1KBnNtOnWg9lt+e+vrxHKQ27Rx51RfwSaVdurMtGZQF/NIilyb1Y+zfyu67iAYVwigAAAAAElFTkSuQmCC"/></a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/pub2.jpg" class="d-block w-100" alt="Gamers">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/pub3.jpg" class="d-block w-100" alt="Gamers">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--CARDS usecase:games-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 card-group">
+                    <div class="card spp" style="width: 18rem;">
+                        <img src="./assets/mk.jpg" class="card-img-top" alt="mk">
+                        <div class="card-body">
+                            <h5 class="card-title">mortal kombat</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div> 
+                    </div>
+
+                       <div class="card spp" style="width: 18rem;">
+                        <img src="./assets/cod.jpg" class="card-img-top" alt="cod">
+                        <div class="card-body">
+                            <h5 class="card-title">call of duty</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="card spp" style="width: 18rem;">
+                        <img src="./assets/gta.jpg" class="card-img-top" alt="gta">
+                        <div class="card-body">
+                            <h5 class="card-title">Grand Theft Auto</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--ACCORDION DROPDOWNS usecase:FAQ-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="accordion" id="accordionExample" >
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
